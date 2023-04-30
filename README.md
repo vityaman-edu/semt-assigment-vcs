@@ -20,6 +20,19 @@ export $SCRIPT_MESSAGE_PREFIX="[$VSC_NAME:$SCRIPT_NAME]"
 export $SCRIPT_MESSAGE="$SCRIPT_MESSAGE_PREFIX example message"
 ```
 
+## Script Head Example
+
+```bash
+#!/bin/bash
+set -e
+cd $(dirname -- "$0"; )
+cd ../..
+export VSC_NAME="svn"
+export TARGET="main"
+export TAG="[$VSC_NAME:$TARGET]"
+export REPO_NAME="semt-assigment-vcs-$VSC_NAME-repository"
+```
+
 ## Contribute
 
 ```bash
