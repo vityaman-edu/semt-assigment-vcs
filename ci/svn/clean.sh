@@ -5,7 +5,7 @@ TARGET="clean"
 
 log "started task '$TARGET'"
 
-remove "playground/$REPO_NAME"
-remove "~/.svnrepos/$REPO_NAME"
+remove playground/$REPO_NAME
+remove ~/.svnrepos/$REPO_NAME
 
 log "finished task '$TARGET'"
