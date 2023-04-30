@@ -10,5 +10,6 @@ bash ci/svn/clean.sh
 bash ci/svn/init.sh
 bash ci/svn/r0.sh
 bash ci/svn/r1.sh
+bash ci/svn/r2.sh
 
 log "finished 'demonstration'"

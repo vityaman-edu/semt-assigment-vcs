@@ -9,8 +9,7 @@ log "started $TARGET"
 
 cd playground/$REPO_NAME
 
-svn checkout file://$HOME/.svnrepos/$REPO_NAME/trunk ./
-svn update
+svn checkout file://$HOME/.svnrepos/$REPO_NAME/$BRANCH ./
 
 copy ../../history/$COMMIT/A.java A.java
 copy ../../history/$COMMIT/B.java B.java
