@@ -10,3 +10,5 @@ echo "[svn:main] pwd: $(pwd)"
 
 bash ci/svn/clean.sh
 bash ci/svn/init.sh
+
+echo "[svn:main] finished 'demonstration'"
