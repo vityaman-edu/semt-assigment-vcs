@@ -1,18 +1,11 @@
 #!/bin/bash
-set -e
-cd $(dirname -- "$0"; )
-cd ../..
-export VSC_NAME="svn"
-export TARGET="clean"
-export TAG="[$VSC_NAME:$TARGET]"
-export REPO_NAME="semt-assigment-vcs-$VSC_NAME-repository"
+. ci/svn/lib/head.sh --source-only
+TARGET="clean"
+. ci/svn/lib/import.sh --source-only
 
-echo "$TAG started task '$TARGET'"
+log "started task '$TARGET'"
 
-rm -rf playground/$REPO_NAME
-echo "$TAG removed playground/$REPO_NAME"
+remove "playground/$REPO_NAME"
+remove "~/.svnrepos/$REPO_NAME"
 
-rm -rf ~/.svnrepos/$REPO_NAME
-echo "$TAG removed ~/.svnrepos/$REPO_NAME"
-
-echo "$TAG finished task '$TARGET'"
+log "finished task '$TARGET'"

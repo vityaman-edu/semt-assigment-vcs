@@ -1,16 +1,13 @@
 #!/bin/bash
-set -e
-cd $(dirname -- "$0"; )
-cd ../..
-export VSC_NAME="svn"
-export TARGET="main"
-export TAG="[$VSC_NAME:$TARGET]"
-export REPO_NAME="semt-assigment-vcs-$VSC_NAME-repository"
+. ci/svn/lib/head.sh --source-only
+TARGET="main"
+. ci/svn/lib/import.sh --source-only
 
-echo "$TAG started 'demonstration'"
-echo "$TAG pwd: $(pwd)"
+log "started 'demonstration'"
+log "pwd: $(pwd)"
 
 bash ci/svn/clean.sh
 bash ci/svn/init.sh
+bash ci/svn/r0.sh
 
-echo "$TAG finished 'demonstration'"
+log "finished 'demonstration'"
