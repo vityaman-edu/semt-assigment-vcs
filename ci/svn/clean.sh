@@ -1,18 +1,11 @@
 #!/bin/bash
+. ci/svn/lib/head.sh --source-only
+TARGET="clean"
+. ci/svn/lib/import.sh --source-only
 
-set -e
+log "started task '$TARGET'"
 
-cd $(dirname -- "$0"; )
-cd ../..
+remove playground/$REPO_NAME
+remove ~/.svnrepos/$REPO_NAME
 
-export REPO_NAME="semt-assigment-vcs-svn-repository"
-
-echo "[svn:clean] started task 'clean'"
-
-rm -rf playground/$REPO_NAME
-echo "[svn:clean] removed playground/$REPO_NAME"
-
-rm -rf ~/.svnrepos/$REPO_NAME
-echo "[svn:clean] removed ~/.svnrepos/$REPO_NAME"
-
-echo "[svn:clean] finished task 'clean'"
+log "finished task '$TARGET'"

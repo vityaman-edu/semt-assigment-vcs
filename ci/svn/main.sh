@@ -1,14 +1,15 @@
 #!/bin/bash
+. ci/svn/lib/head.sh --source-only
+TARGET="main"
+. ci/svn/lib/import.sh --source-only
 
-set -e
-
-cd $(dirname -- "$0"; )
-cd ../..
-
-echo "[svn:main] started 'demonstration'"
-echo "[svn:main] pwd: $(pwd)"
+log "started 'demonstration'"
+log "pwd: $(pwd)"
 
 bash ci/svn/clean.sh
 bash ci/svn/init.sh
+bash ci/svn/r0.sh
+bash ci/svn/r1.sh
+bash ci/svn/r2.sh
 
-echo "[svn:main] finished 'demonstration'"
+log "finished 'demonstration'"
