@@ -11,6 +11,6 @@ remove() {
 }
 
 copy() {
-    cp $1 $2
+    cp "$1" "$2"
     log "copied $1 to $2"
 }

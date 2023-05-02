@@ -21,8 +21,11 @@ log "repository initialized"
 
 mkdir -p playground/$REPO_NAME
 cd playground/$REPO_NAME
-svn checkout file://$HOME/.svnrepos/$REPO_NAME/trunk ./
-svn add --force ./
+
+svn checkout file://$HOME/.svnrepos/$REPO_NAME/trunk trunk
+cd trunk
+
+svn add --force .
 svn commit -m "Initial import."
 svn update
 

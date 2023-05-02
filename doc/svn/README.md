@@ -2,7 +2,8 @@
 
 ## Reference
 
-- [Subsversion: Quick start](https://subversion.apache.org/quick-start)
+- [Subversion: Quick start](https://subversion.apache.org/quick-start)
+- [Subversion: Branching](https://svnbook.red-bean.com/nightly/en/svn.branchmerge.html)
 
 ## Commands
 

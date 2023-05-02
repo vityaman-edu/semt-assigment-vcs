@@ -1,5 +1,10 @@
 # SEMT Assigment: VCS
 
+## Goal
+
+Simulate a repository usage.
+![History](./doc/res/history.png)
+
 ## Project Structure
 
 ```bash

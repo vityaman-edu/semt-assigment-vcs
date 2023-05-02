@@ -1,7 +1,7 @@
 #!/bin/bash
 . ci/svn/lib/head.sh --source-only
-BRANCH="trunk"
-COMMIT="commit1"
+BRANCH="feature-2"
+COMMIT="commit7"
 TARGET="$BRANCH:$COMMIT"
 . ci/svn/lib/import.sh --source-only
 
@@ -17,5 +17,6 @@ copy $SRC/E.java E.java
 copy $SRC/F.java F.java
 
 svn commit -m "$TAG edited A, B, E, F"
+log "commited changes to $BRANCH"
 
 log "finished $TARGET"
