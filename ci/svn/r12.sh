@@ -1,27 +1,24 @@
 #!/bin/bash
+
 . ci/svn/lib/head.sh --source-only
 BRANCH="feature-2"
 COMMIT="commit12"
 TARGET="$BRANCH:$COMMIT"
-. ci/svn/lib/import.sh --source-only
+. ci/svn/lib/dsl.sh --source-only
 
-log "started $TARGET"
+begin
+  enter
 
-cd playground/$REPO_NAME/$BRANCH
-svn update
+  delete "*"
+  delete "3yNy8wQeGi.Xzj"
+  edit A.java
+  edit B.java
+  edit E.java
+  edit F.java
 
-SRC=../../../history/$COMMIT
-remove              "*"
-remove              "3yNy8wQeGi.Xzj"
-copy $SRC/A.java    A.java
-copy $SRC/B.java    B.java
-copy $SRC/E.java    E.java
-copy $SRC/F.java    F.java
+  svn remove "*"
+  svn remove "3yNy8wQeGi.Xzj"
 
-svn remove "*"
-svn remove "3yNy8wQeGi.Xzj"
-
-svn commit -m "$TAG edited A, B, E, F, removed *, 3yNy8wQeGi.Xzj"
-log "commited changes to $BRANCH"
-
-log "finished $TARGET"
+  svn commit -m "$TAG edited A, B, E, F, removed *, 3yNy8wQeGi.Xzj"
+  log "commited changes to $BRANCH"
+end
