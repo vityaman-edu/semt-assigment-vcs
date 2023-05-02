@@ -30,6 +30,12 @@ end() {
 enter() {
   SRC=../../../history/$COMMIT
   cd playground/$REPO_NAME/$BRANCH
+
+  USERNAME="blue"
+  if [[ $BRANCH = "trunk" ]] then
+    USERNAME="red"
+  fi
+  svn update --username $USERNAME
 }
 
 edit() {
