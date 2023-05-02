@@ -7,18 +7,16 @@ TARGET="$BRANCH:$COMMIT"
 
 log "started $TARGET"
 
-cd playground/$REPO_NAME
+cd playground/$REPO_NAME/$BRANCH
+svn update
 
-svn checkout file://$HOME/.svnrepos/$REPO_NAME/$BRANCH ./
-
-SRC=../../history/$COMMIT
+SRC=../../../history/$COMMIT
 copy $SRC/A.java A.java
 copy $SRC/B.java B.java
 copy $SRC/E.java E.java
 copy $SRC/F.java F.java
 
 svn commit -m "$TAG edited A, B, E, F"
-
 svn update
 
 log "finished $TARGET"
