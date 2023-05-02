@@ -19,6 +19,5 @@ copy $SRC/F.java F.java
 svn add *
 
 svn commit -m "$TAG added A, B, E, F"
-svn update
 
 log "finished $TARGET"

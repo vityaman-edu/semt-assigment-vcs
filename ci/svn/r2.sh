@@ -13,7 +13,6 @@ svn copy \
     -m "Creating a branch for a feature #1"
 log "created a branch $BRANCH for a feature #1"
 
-
 cd playground/$REPO_NAME
 
 svn checkout file://$HOME/.svnrepos/$REPO_NAME/branches/$BRANCH $BRANCH
@@ -28,6 +27,5 @@ copy $SRC/F.java F.java
 
 svn commit -m "$TAG edited A, B, E, F"
 log "commited changes to $BRANCH"
-svn update
 
 log "finished $TARGET"

@@ -16,5 +16,13 @@ bash $SCRIPT/r3.sh
 bash $SCRIPT/r4.sh
 bash $SCRIPT/r5.sh
 bash $SCRIPT/r6.sh
+bash $SCRIPT/r7.sh
+bash $SCRIPT/r8.sh
+bash $SCRIPT/r9.sh
+bash $SCRIPT/r10.sh
+bash $SCRIPT/r11.sh
+bash $SCRIPT/r12.sh
+bash $SCRIPT/r13.sh
+bash $SCRIPT/r14.sh
 
 log "finished 'demonstration'"

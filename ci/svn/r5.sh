@@ -18,6 +18,5 @@ copy $SRC/F.java F.java
 
 svn commit -m "$TAG edited A, B, E, F"
 log "commited changes to $BRANCH"
-svn update
 
 log "finished $TARGET"

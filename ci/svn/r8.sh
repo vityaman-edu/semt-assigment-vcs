@@ -1,7 +1,7 @@
 #!/bin/bash
 . ci/svn/lib/head.sh --source-only
-BRANCH="trunk"
-COMMIT="commit3"
+BRANCH="feature-2"
+COMMIT="commit8"
 TARGET="$BRANCH:$COMMIT"
 . ci/svn/lib/import.sh --source-only
 
@@ -22,6 +22,5 @@ svn add "*"
 svn add "3yNy8wQeGi.Xzj"
 
 svn commit -m "$TAG edited A, B, E, F, added *, 3yNy8wQeGi.Xzj"
-log "commited changes to $BRANCH"
 
-log "finished $TARGET"
+log "finised $TARGET"
