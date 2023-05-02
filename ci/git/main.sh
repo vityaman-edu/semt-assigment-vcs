@@ -8,4 +8,5 @@ begin
   call clean
   call init
   call r0
+  call r1
 end
