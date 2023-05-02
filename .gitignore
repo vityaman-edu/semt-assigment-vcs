@@ -1,1 +1,12 @@
+# Scripts output
 playground/*
+
+# Latex
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
