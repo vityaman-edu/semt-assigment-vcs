@@ -1,11 +1,7 @@
-#!/bin/bash
-
 . ci/git/lib/head.sh --source-only
-TARGET="main"
+TARGET="clean"
 . ci/git/lib/dsl.sh --source-only
 
 begin
-  call clean
-  call init
-  call r0
+  remove ~/.gitrepos/$REPO_NAME
 end
