@@ -20,8 +20,6 @@ begin
 
   svn remove "3yNy8wQeGi.Xzj"
 
-  svn commit \
-    -m "merged feature-1, $TAG edited A, B, E, F, removed 3yNy8wQeGi.Xzj"
+  svn commit -m "merged feature-1, $TAG edited A, B, E, F, removed 3yNy8wQeGi.Xzj"
   log "commited changes to $BRANCH"
-
 end

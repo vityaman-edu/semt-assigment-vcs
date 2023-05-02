@@ -17,7 +17,6 @@ begin
   edit E.java
   edit F.java
 
-  svn commit -m \
-    "$TAG edited A, B, E, F, merged feature-2 into $BRANCH"
+  svn commit -m "$TAG edited A, B, E, F, merged feature-2 into $BRANCH"
   log "commited changes to $BRANCH"
 end
