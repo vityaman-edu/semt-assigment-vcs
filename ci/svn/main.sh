@@ -1,28 +1,27 @@
 #!/bin/bash
+
 . ci/svn/lib/head.sh --source-only
 TARGET="main"
-. ci/svn/lib/import.sh --source-only
+. ci/svn/lib/dsl.sh --source-only
 
-log "started 'demonstration'"
-log "pwd: $(pwd)"
+begin
+  log "pwd: $(pwd)"
 
-SCRIPT="ci/svn"
-bash $SCRIPT/clean.sh
-bash $SCRIPT/r_init.sh
-bash $SCRIPT/r0.sh
-bash $SCRIPT/r1.sh
-bash $SCRIPT/r2.sh
-bash $SCRIPT/r3.sh
-bash $SCRIPT/r4.sh
-bash $SCRIPT/r5.sh
-bash $SCRIPT/r6.sh
-bash $SCRIPT/r7.sh
-bash $SCRIPT/r8.sh
-bash $SCRIPT/r9.sh
-bash $SCRIPT/r10.sh
-bash $SCRIPT/r11.sh
-bash $SCRIPT/r12.sh
-bash $SCRIPT/r13.sh
-bash $SCRIPT/r14.sh
-
-log "finished 'demonstration'"
+  call clean
+  call r_init
+  call r0
+  call r1
+  call r2
+  call r3
+  call r4
+  call r5
+  call r6
+  call r7
+  call r8
+  call r9
+  call r10
+  call r11
+  call r12
+  call r13
+  call r14
+end

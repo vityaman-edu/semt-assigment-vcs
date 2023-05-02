@@ -1,26 +1,23 @@
 #!/bin/bash
+
 . ci/svn/lib/head.sh --source-only
 BRANCH="feature-2"
 COMMIT="commit8"
 TARGET="$BRANCH:$COMMIT"
-. ci/svn/lib/import.sh --source-only
+. ci/svn/lib/dsl.sh --source-only
 
-log "started $TARGET"
+begin
+  enter
 
-cd playground/$REPO_NAME/$BRANCH
-svn update
+  edit "*"
+  edit "3yNy8wQeGi.Xzj"
+  edit A.java
+  edit B.java
+  edit E.java
+  edit F.java
 
-SRC=../../../history/$COMMIT
-copy "$SRC/*"              "*"
-copy "$SRC/3yNy8wQeGi.Xzj" "3yNy8wQeGi.Xzj"
-copy $SRC/A.java           A.java
-copy $SRC/B.java           B.java
-copy $SRC/E.java           E.java
-copy $SRC/F.java           F.java
+  svn add "*"
+  svn add "3yNy8wQeGi.Xzj"
 
-svn add "*"
-svn add "3yNy8wQeGi.Xzj"
-
-svn commit -m "$TAG edited A, B, E, F, added *, 3yNy8wQeGi.Xzj"
-
-log "finised $TARGET"
+  svn commit -m "$TAG edited A, B, E, F, added *, 3yNy8wQeGi.Xzj"
+end
