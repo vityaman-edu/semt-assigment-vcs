@@ -24,4 +24,9 @@ begin
   call r12
   call r13
   call r14
+
+  svn checkout file://$HOME/.svnrepos/$REPO_NAME out
+  cd out
+  svn log > $VSC_NAME-log.txt
+  cd ..
 end

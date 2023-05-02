@@ -16,5 +16,4 @@ begin
 
   svn commit -m "$TAG edited A, B, E, F"
   log "commited changes to $BRANCH"
-
 end

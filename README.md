@@ -16,13 +16,13 @@ bash ci/run.sh svn
 
 ```bash
 VSC_NAME="git" # or "svn"
-ls ci/$VSC_NAME        # scripts for simulation
-ls doc/$VSC_NAME       # some docs for youself
+tree ci/$VSC_NAME        # scripts for simulation
+tree doc/$VSC_NAME       # some docs for youself
 ls history             # commit history to simulate
-ls playground/semt-assigment-vcs-$VSC_NAME-repository
+tree playground/semt-assigment-vcs-$VSC_NAME-repository
 ```
 
-## Code-Style
+## Code Style
 
 ```bash
 VSC_NAME="git" # or "svn"
@@ -45,3 +45,8 @@ git commit -m "[$VSC_NAME] changes description"
 git push
 # * create a pull request into trunk *
 ```
+
+## Authors
+
+- [Artem @Ovoshchko Shinakov](https://github.com/Ovoshchko)
+- [Victor @vityaman Smirnov](https://github.com/vityaman)
