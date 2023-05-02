@@ -19,6 +19,7 @@ begin
   svn add "*"
   svn add "67VNlR0FbP.TcV"
 
-  svn commit -m "$TAG edited A, B, E, F, restored *, added 67VNlR0FbP.TcV"
+  svn commit \
+    -m "$TAG edited A, B, E, F, restored *, added 67VNlR0FbP.TcV"
   log "commited changes to $BRANCH"
 end

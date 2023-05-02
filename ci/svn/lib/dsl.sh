@@ -30,7 +30,6 @@ end() {
 enter() {
   SRC=../../../history/$COMMIT
   cd playground/$REPO_NAME/$BRANCH
-  svn update
 }
 
 edit() {
@@ -53,7 +52,8 @@ branch() {
   log $3
   
   cd playground/$REPO_NAME
-  svn checkout file://$HOME/.svnrepos/$REPO_NAME/branches/$2 $2
+  svn checkout \
+    file://$HOME/.svnrepos/$REPO_NAME/branches/$2 $2
   log "checkout to branch $2"
   cd ../..
 }

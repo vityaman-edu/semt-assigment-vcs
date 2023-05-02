@@ -1,5 +1,6 @@
 # Scripts output
 playground/*
+out/*
 
 # Latex
 *.aux

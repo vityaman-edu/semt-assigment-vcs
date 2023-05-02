@@ -7,7 +7,7 @@ TARGET="$BRANCH:$COMMIT"
 . ci/svn/lib/dsl.sh --source-only
 
 begin
-  branch "trunk" $BRANCH  "Creating a branch for a feature #2"
+  branch "trunk" $BRANCH  "Creating a branch for a feature #2" blue
 
   enter
 

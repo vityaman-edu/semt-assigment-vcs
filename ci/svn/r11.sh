@@ -18,6 +18,7 @@ begin
 
   svn remove "67VNlR0FbP.TcV"
 
-  svn commit -m "$TAG edited A, B, E, F, *, removed 67VNlR0FbP.TcV"
+  svn commit \
+    -m "$TAG edited A, B, E, F, *, removed 67VNlR0FbP.TcV"
   log "commited changes to $BRANCH"
 end
