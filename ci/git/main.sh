@@ -9,4 +9,5 @@ begin
   call init
   call r0
   call r1
+  call r2
 end
