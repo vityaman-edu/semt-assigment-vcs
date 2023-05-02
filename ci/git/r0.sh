@@ -14,7 +14,7 @@ begin
   set_name $NAME
   set_email $EMAIL
 
-  cp ~/$SRC/"A.java" ~/.gitrepo/$REPO_NAME
+  cp ~/$SRC/* ~/.gitrepo/$REPO_NAME
   add_all
 
   comm "added files"
