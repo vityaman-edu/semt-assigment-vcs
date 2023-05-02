@@ -35,7 +35,7 @@ set_email() {
 }
 
 enter() {
-  SRC=*/*/history/$COMMIT
+  SRC=MISPI/Lab2/history/$COMMIT
 }
 
 comm() {
