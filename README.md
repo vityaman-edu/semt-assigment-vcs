@@ -5,6 +5,13 @@
 Simulate a repository usage.
 ![History](./doc/res/history.png)
 
+## Run
+
+```bash
+bash ci/run.sh git
+bash ci/run.sh svn
+```
+
 ## Project Structure
 
 ```bash
