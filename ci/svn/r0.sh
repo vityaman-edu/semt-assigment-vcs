@@ -12,15 +12,13 @@ cd playground/$REPO_NAME
 svn checkout file://$HOME/.svnrepos/$REPO_NAME/trunk ./
 svn update
 
-copy ../../history/$COMMIT/A.java A.java
-copy ../../history/$COMMIT/B.java B.java
-copy ../../history/$COMMIT/E.java E.java
-copy ../../history/$COMMIT/F.java F.java
+SRC=../../history/$COMMIT
+copy $SRC/A.java A.java
+copy $SRC/B.java B.java
+copy $SRC/E.java E.java
+copy $SRC/F.java F.java
 
-svn add A.java
-svn add B.java
-svn add E.java
-svn add F.java
+svn add *
 
 svn commit -m "$TAG added A, B, E, F"
 

@@ -11,10 +11,11 @@ cd playground/$REPO_NAME
 
 svn checkout file://$HOME/.svnrepos/$REPO_NAME/$BRANCH ./
 
-copy ../../history/$COMMIT/A.java A.java
-copy ../../history/$COMMIT/B.java B.java
-copy ../../history/$COMMIT/E.java E.java
-copy ../../history/$COMMIT/F.java F.java
+SRC=../../history/$COMMIT
+copy $SRC/A.java A.java
+copy $SRC/B.java B.java
+copy $SRC/E.java E.java
+copy $SRC/F.java F.java
 
 svn commit -m "$TAG edited A, B, E, F"
 
