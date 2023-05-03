@@ -3,6 +3,7 @@
 ## Reference
 
 - [Git: Getting started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+- [Git: On a Server](https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server)
 
 ## Commands
 
@@ -16,7 +17,7 @@ git checkout branch-name
 git checkout -b branch-name
 
 git add -A
-git commit -n "commit message"
+git commit -m "commit message"
 git push
 
 git remote -v
@@ -42,6 +43,35 @@ git config --global alias.last 'log -1 HEAD'
 git config --global alias.visual '!gitk'
 ```
 
+## Branches
+
+```bash
+git log --oneline --decorate --graph --all # view
+
+git checkout master
+git checkout -b dev # ~ git branch dev && git checkout dev
+
+git switch testing-branch # ~ git checkout branch
+git switch -c new-branch
+git switch --create new-branch
+git switch - # Return to your previously checked out branch
+
+git merge hotfix # into current branch
+
+git branch -d hotfix # delete the branch
+git branch -v
+git branch --merged
+git branch --no-merged master
+git branch --no-merged
+
+git mergetool
+
+git checkout experiment
+git rebase master
+git checkout master
+git merge experiment
+```
+
 ## Recepies
 
 ```bash
@@ -55,4 +85,14 @@ git checkout -- changed-file.ext
 # or
 git restore changed-file.ext
 
+# Makes git push for a new branch easier
+git config --global --add --bool push.autoSetupRemote true
+
+# Shorthand git add -A && git commit -m "commit message"
+git commit -a -m "message" 
+
+# Rename a branch
+git branch --move bad-branch-name corrected-branch-name
+git push --set-upstream origin corrected-branch-name
+git push origin --delete bad-branch-name
 ```
