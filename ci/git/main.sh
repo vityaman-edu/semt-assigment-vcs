@@ -1,13 +1,24 @@
 #!/bin/bash
 
-set -e
+. ci/git/lib/head.sh --source-only
+TARGET="main"
+. ci/git/lib/dsl.sh --source-only
 
-cd $(dirname -- "$0"; )
-cd ../..
-
-echo "[git:main] started 'demonstration'"
-echo "[git:main] pwd: $(pwd)"
-
-echo "[git:main] demonstration not implemented yet"
-
-echo "[git:main] started 'demonstration'"
+begin
+  call clean
+  call init
+  call r0
+  call r1
+  call r2
+  call r3
+  call r4
+  call r5
+  call r6
+  call r7
+  call r8
+  call r9
+  call r10
+  call r11
+  call r12
+  call r13
+end
