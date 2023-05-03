@@ -1,22 +1,19 @@
 #!/bin/bash
 
 . ci/git/lib/head.sh --source-only
-BRANCH="trunk"
+BRANCH="master"
 COMMIT="commit1"
 TARGET="$BRANCH:$COMMIT"
-NAME="RedUser"
-EMAIL="RedUser@itmo.ru"
+NAME="Artem"
+EMAIL="Artem@itmo.ru"
 . ci/git/lib/dsl.sh --source-only
 
 begin
   enter 
 
-  set_name $NAME
-  set_email $EMAIL
-
-  cp ~/$SRC/* ~/.gitrepo/$REPO_NAME
+  cp ~/$SRC/* .
   add_all
 
-  comm "added files r1"
+  comm "Added: bb - print class name in F.java."
   
 end

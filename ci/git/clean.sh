@@ -3,5 +3,6 @@ TARGET="clean"
 . ci/git/lib/dsl.sh --source-only
 
 begin
-  remove ~/.gitrepos/$REPO_NAME
+  remove ~/.gitrepo/$REPO_NAME/.git
+  remove ~/.gitrepo/$REPO_NAME
 end

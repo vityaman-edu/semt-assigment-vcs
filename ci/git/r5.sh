@@ -1,22 +1,24 @@
 #!/bin/bash
 
 . ci/git/lib/head.sh --source-only
-BRANCH="master"
-COMMIT="commit0"
+BRANCH="second_branch"
+COMMIT="commit5"
 TARGET="$BRANCH:$COMMIT"
-NAME="Artem"
-EMAIL="Artem@itmo.ru"
+NAME="Vitya"
+EMAIL="Vitya@itmo.ru"
 . ci/git/lib/dsl.sh --source-only
 
 begin
   enter 
-
+  
   set_name $NAME
   set_email $EMAIL
-
+  
+  git checkout second_branch
+  
   cp ~/$SRC/* .
   add_all
 
-  comm "Start of project. Added initial files."
+  comm "Added: bb - print class name in F.java."
   
 end

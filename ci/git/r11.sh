@@ -2,21 +2,20 @@
 
 . ci/git/lib/head.sh --source-only
 BRANCH="master"
-COMMIT="commit0"
+COMMIT="commit11"
 TARGET="$BRANCH:$COMMIT"
 NAME="Artem"
 EMAIL="Artem@itmo.ru"
 . ci/git/lib/dsl.sh --source-only
 
 begin
-  enter 
-
-  set_name $NAME
-  set_email $EMAIL
+  enter
 
   cp ~/$SRC/* .
   add_all
 
-  comm "Start of project. Added initial files."
+  git rm 67VNlR0FbP.TcV -f
+
+  comm "Added: A, B, E, F classes got one new method each, 67VNlR0FbP.TcV file - removed."
   
 end

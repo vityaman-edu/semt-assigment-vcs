@@ -2,7 +2,7 @@
 
 . ci/git/lib/head.sh --source-only
 BRANCH="master"
-COMMIT="commit0"
+COMMIT="commit9"
 TARGET="$BRANCH:$COMMIT"
 NAME="Artem"
 EMAIL="Artem@itmo.ru"
@@ -10,13 +10,17 @@ EMAIL="Artem@itmo.ru"
 
 begin
   enter 
-
+  
   set_name $NAME
   set_email $EMAIL
-
+  
+  git checkout master
+  
   cp ~/$SRC/* .
   add_all
 
-  comm "Start of project. Added initial files."
+  git rm "*" -f
+
+  comm "Added: nn fuction - returns Object in F class, * file - was removed, classes A, B, E got one new method each "
   
 end
