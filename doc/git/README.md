@@ -96,3 +96,26 @@ git branch --move bad-branch-name corrected-branch-name
 git push --set-upstream origin corrected-branch-name
 git push origin --delete bad-branch-name
 ```
+
+## Setting up a remote Git repository
+
+```bash
+# Init repo from existing project
+git clone --bare my_project my_project.git
+scp -r my_project.git user@git.example.com:/srv/git
+ssh user@git.example.com
+cd /srv/git/my_project.git
+git init --bare --shared
+
+# Init repo from empty
+cd /srv/git
+mkdir project.git
+cd project.git
+git init --bare
+
+# Setup server ssh access
+ssh-copy-id -i ~/.ssh/id_rsa.pub tim@just.some.other.server
+
+# Clone repo and be happy
+git clone user@git.example.com:/srv/git/my_project.git
+```
