@@ -16,7 +16,7 @@ begin
 
   git checkout third_branch
 
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   comm "Added: bb function - returns Object in F.java"

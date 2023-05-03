@@ -17,7 +17,7 @@ begin
   git checkout master
   
   git merge second_branch -m "Second branch does not contain any new features"
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   git rm 3yNy8wQeGi.Xzj -f

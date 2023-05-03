@@ -11,7 +11,7 @@ EMAIL="Vitya@itmo.ru"
 begin 
   enter
 
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   comm "Added: pp fuction - returns Object in F class, * file - contains chinese, 3yNy8wQeGi.Xzj file - contains binary something"

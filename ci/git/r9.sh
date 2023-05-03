@@ -16,7 +16,7 @@ begin
   
   git checkout master
   
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   git rm "*" -f

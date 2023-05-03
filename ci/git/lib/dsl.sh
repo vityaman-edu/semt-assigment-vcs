@@ -35,7 +35,6 @@ set_email() {
 }
 
 enter() {
-  SRC=MISPI/Lab2/history/$COMMIT
   cd ~/.gitrepo/$REPO_NAME
 }
 

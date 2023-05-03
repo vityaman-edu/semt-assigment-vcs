@@ -16,7 +16,7 @@ begin
   
   git checkout -b second_branch
 
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   comm "Created second branch, files are in the same state as in r0 commit."

@@ -11,7 +11,7 @@ EMAIL="Artem@itmo.ru"
 begin
   enter
 
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   git rm 67VNlR0FbP.TcV -f

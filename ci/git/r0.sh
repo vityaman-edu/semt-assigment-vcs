@@ -14,7 +14,7 @@ begin
   set_name $NAME
   set_email $EMAIL
 
-  cp ~/$SRC/* .
+  cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   comm "Start of project. Added initial files."
