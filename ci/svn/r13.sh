@@ -9,7 +9,6 @@ TARGET="$BRANCH:$COMMIT"
 begin
   enter
 
-  svn mergeinfo ^/branches/feature-2
   svn merge ^/branches/feature-2
   log "merged feature-2 into trunk"
 
@@ -18,7 +17,6 @@ begin
   edit E.java
   edit F.java
 
-  svn commit -m \
-    "$TAG edited A, B, E, F, merged feature-2 into $BRANCH"
+  svn commit -m "$TAG edited A, B, E, F, merged feature-2 into $BRANCH"
   log "commited changes to $BRANCH"
 end
