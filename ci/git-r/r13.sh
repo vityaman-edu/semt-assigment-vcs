@@ -4,7 +4,7 @@
 BRANCH="master"
 COMMIT="commit13"
 TARGET="$BRANCH:$COMMIT"
-NAME="Artem"
+NAME=$ARTEM
 EMAIL="Artem@itmo.ru"
 . ci/git-r/lib/dsl.sh --source-only
 
@@ -20,12 +20,13 @@ begin
   {
     git merge third_branch
   }||{
-    cp $HISTORY_PATH/$COMMIT/* .
+    git checkout second_branch F.java
+    git rm "*" -f
   }
   
-  add_all
+  cp $HISTORY_PATH/$COMMIT/* .
 
-  git rm "*" -f
+  add_all
 
   comm "Merged master and third branch. Added new functions in B, E, F"
 

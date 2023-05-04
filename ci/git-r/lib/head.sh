@@ -10,4 +10,4 @@ VITYA="Vitya"
 VSC_NAME="git-r"
 REPO_NAME="semt-assigment-vcs-$VSC_NAME-repository"
 SCRIPT="ci/git-r"
-URL=~/.gitrepo/$REPO_NAME
+URL=git+ssh://s337054@se.ifmo.ru:2222/home/studs/s337054/srv/git/project.git
