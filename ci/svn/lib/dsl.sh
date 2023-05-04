@@ -1,6 +1,5 @@
 TAG="[$VSC_NAME:$TARGET]"
 
-
 log() {
   echo "$TAG $1"
 }
@@ -32,7 +31,7 @@ enter() {
   cd playground/$REPO_NAME/$BRANCH
 
   USERNAME="blue"
-  if [[ $BRANCH = "trunk" ]] then
+  if [[ $BRANCH = "trunk" ]]; then
     USERNAME="red"
   fi
   svn update --username $USERNAME
