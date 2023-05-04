@@ -1,19 +1,22 @@
 #!/bin/bash
 
-. ci/git/lib/head.sh --source-only
+. ci/git-r/lib/head.sh --source-only
 BRANCH="master"
 COMMIT="commit6"
 TARGET="$BRANCH:$COMMIT"
-NAME="Artem"
+NAME=$ARTEM
 EMAIL="Artem@itmo.ru"
-. ci/git/lib/dsl.sh --source-only
+. ci/git-r/lib/dsl.sh --source-only
 
 begin
-  enter 
-  
-  set_name $NAME
-  set_email $EMAIL
-  
+  enter
+
+  git pull origin
+
+  git checkout second_branch
+
+  git checkout third_branch
+
   git checkout master
   
   git merge second_branch -m "Second branch does not contain any new features"
@@ -24,4 +27,5 @@ begin
 
   comm "Added: pp fuction - returns Object in F class, * file - contains chinese, 3yNy8wQeGi.Xzj file - contains binary something, interfaces A,B,E turned into classes"
   
+  git push origin
 end

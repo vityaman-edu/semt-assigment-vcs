@@ -17,7 +17,7 @@ begin
   git checkout master
 
   {
-    git merge third_branch
+    git merge third_branch -m "Merging third and master"
   }||{
     cp $HISTORY_PATH/$COMMIT/* .
   }

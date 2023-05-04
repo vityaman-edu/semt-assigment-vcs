@@ -18,5 +18,6 @@ begin
   add_all
 
   comm "Start of project. Added initial files."
-  
+
+  git push origin
 end

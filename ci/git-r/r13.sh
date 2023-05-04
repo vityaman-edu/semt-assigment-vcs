@@ -1,18 +1,19 @@
 #!/bin/bash
 
-. ci/git/lib/head.sh --source-only
+. ci/git-r/lib/head.sh --source-only
 BRANCH="master"
 COMMIT="commit13"
 TARGET="$BRANCH:$COMMIT"
 NAME="Artem"
 EMAIL="Artem@itmo.ru"
-. ci/git/lib/dsl.sh --source-only
+. ci/git-r/lib/dsl.sh --source-only
 
 begin
   enter 
+
+  git pull origin
   
-  set_name $NAME
-  set_email $EMAIL
+  git checkout third_branch
 
   git checkout master
 
@@ -27,5 +28,7 @@ begin
   git rm "*" -f
 
   comm "Merged master and third branch. Added new functions in B, E, F"
+
+  git push origin
   
 end

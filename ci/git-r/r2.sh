@@ -14,7 +14,7 @@ begin
   set_name $NAME
   set_email $EMAIL
   
-  git pull
+  git pull origin
 
   git checkout -b second_branch
 
@@ -23,6 +23,5 @@ begin
 
   comm "Created second branch, files are in the same state as in r0 commit."
   
-  git push --set-upstream origin second_branch
-  git push
+  git push origin second_branch
 end

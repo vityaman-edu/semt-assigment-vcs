@@ -1,18 +1,15 @@
 #!/bin/bash
 
-. ci/git/lib/head.sh --source-only
+. ci/git-r/lib/head.sh --source-only
 BRANCH="third-branch"
 COMMIT="commit12"
 TARGET="$BRANCH:$COMMIT"
-NAME="Vitya"
+NAME=$VITYA
 EMAIL="Vitya@itmo.ru"
-. ci/git/lib/dsl.sh --source-only
+. ci/git-r/lib/dsl.sh --source-only
 
 begin 
   enter
-
-  set_name $NAME
-  set_email $EMAIL
 
   git checkout third_branch
 
@@ -24,5 +21,6 @@ begin
 
   comm "Added: mm function - returns Object in F.java, * and 3yNy8wQeGi.Xzj files were removed."
 
+  git push origin third_branch
 end
 

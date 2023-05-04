@@ -27,4 +27,5 @@ begin
   mkdir logs
   cd logs
   git log > $VSC_NAME-log.txt
+  git log --pretty=format:"%h %s" --graph > $VSC_NAME-graph.txt
 end

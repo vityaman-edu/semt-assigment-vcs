@@ -11,6 +11,7 @@ begin
   cd ~/.gitrepo
   git init $REPO_NAME --bare
   
+  git config --global pull.rebase false
   log "repository created"
 
 end
