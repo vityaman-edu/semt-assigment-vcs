@@ -15,6 +15,7 @@ begin
   edit E.java
   edit F.java
 
+  # Untrack file *
   svn remove "*"
 
   svn commit -m "$TAG edited A, B, E, F, removed *"

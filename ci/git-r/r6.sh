@@ -13,12 +13,12 @@ begin
 
   git pull origin
 
+  # Pull all branches from remote
   git checkout second_branch
-
   git checkout third_branch
-
   git checkout master
   
+  # Explicitly merge second_branch into current
   git merge second_branch -m "Second branch does not contain any new features"
   cp $HISTORY_PATH/$COMMIT/* .
   add_all

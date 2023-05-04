@@ -13,5 +13,4 @@ begin
   
   git config --global pull.rebase false
   log "repository created"
-
 end

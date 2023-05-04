@@ -19,5 +19,6 @@ begin
 
   comm "Start of project. Added initial files."
 
+  # Push changes to remote repository
   git push origin
 end

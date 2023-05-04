@@ -15,13 +15,14 @@ begin
 
   git pull origin
 
+  # Create and switch to branch third_branch
   git checkout -b third_branch
 
   cp $HISTORY_PATH/$COMMIT/* .
-  
+
   git rm "*" -f
   git rm 3yNy8wQeGi.Xzj -f
-  
+
   add_all
   
   comm "Created third branch, files are in the same state as in r0 commit., files * and 3yNy8wQeGi.Xzj were removed"

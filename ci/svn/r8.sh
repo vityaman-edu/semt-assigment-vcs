@@ -16,6 +16,7 @@ begin
   edit E.java
   edit F.java
 
+  # Track new files
   svn add "*"
   svn add "3yNy8wQeGi.Xzj"
 

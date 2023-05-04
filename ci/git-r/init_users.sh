@@ -12,7 +12,5 @@ begin
   git clone $URL $USERS_REPO/$ARTEM
   git clone $URL $USERS_REPO/$VITYA
 
-  
   log "repository for users created"
-
 end

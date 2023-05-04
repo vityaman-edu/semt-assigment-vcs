@@ -9,9 +9,10 @@ remove() {
   log "removed $1"
 }
 
-add_all(){
-    git add .
-    log "added files from $TAG"
+add_all() {
+  # Stage changes 
+  git add .
+  log "added files from $TAG"
 }
 
 call() {
@@ -27,10 +28,12 @@ end() {
 }
 
 set_name() {
+  # Set git user name
   git config --local user.name "$1"
 }
 
 set_email() {
+  # Set git user email
   git config --local user.email "$2"
 }
 
@@ -39,5 +42,6 @@ enter() {
 }
 
 comm() {
-    git commit -m "$1"
+  # Commit changes
+  git commit -m "$1"
 }

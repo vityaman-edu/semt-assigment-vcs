@@ -11,6 +11,8 @@ EMAIL="Artem@itmo.ru"
 begin
   enter 
 
+  # Fetch changes from remote repo and merge 
+  # it with current local state
   git pull origin
   
   cp $HISTORY_PATH/$COMMIT/* .

@@ -9,6 +9,7 @@ TARGET="$BRANCH:$COMMIT"
 begin
   enter
   
+  # Merge branch feature-1 into trunk
   svn merge ^/branches/feature-1
   log "merged feature-1 into trunk"
 
@@ -18,6 +19,7 @@ begin
   edit E.java
   edit F.java
 
+  # Remove file from remote at next commit
   svn remove "3yNy8wQeGi.Xzj"
 
   svn commit -m "merged feature-1, $TAG edited A, B, E, F, removed 3yNy8wQeGi.Xzj"

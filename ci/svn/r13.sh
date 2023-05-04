@@ -9,6 +9,7 @@ TARGET="$BRANCH:$COMMIT"
 begin
   enter
 
+  # Merge changes from branch feature-2 into trunk 
   svn merge ^/branches/feature-2
   log "merged feature-2 into trunk"
 

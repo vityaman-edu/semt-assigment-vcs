@@ -24,7 +24,7 @@ begin
   call r13
   call r14
 
-  cd ~/.gitrepo/$REPO_NAME
+  cd $USERS_REPO/$ARTEM
   mkdir logs
   cd logs
   git log > $VSC_NAME-log.txt

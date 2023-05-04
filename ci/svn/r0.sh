@@ -13,7 +13,7 @@ begin
   edit B.java
   edit E.java
   edit F.java
-
-  svn add *
-  svn commit -m "$TAG added A, B, E, F"
+  
+  svn add * # Add these files at next commit
+  svn commit -m "$TAG added A, B, E, F" # Fix & Upload changes
 end
