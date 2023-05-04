@@ -1,19 +1,22 @@
 #!/bin/bash
 
-. ci/git/lib/head.sh --source-only
+. ci/git-r/lib/head.sh --source-only
 BRANCH="master"
 COMMIT="commit1"
 TARGET="$BRANCH:$COMMIT"
-NAME="Artem"
+NAME=$ARTEM
 EMAIL="Artem@itmo.ru"
-. ci/git/lib/dsl.sh --source-only
+. ci/git-r/lib/dsl.sh --source-only
 
 begin
   enter 
 
+  git pull origin
+  
   cp $HISTORY_PATH/$COMMIT/* .
   add_all
 
   comm "Added: bb - print class name in F.java."
   
+  git push origin
 end

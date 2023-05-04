@@ -13,22 +13,19 @@ begin
   
   set_name $NAME
   set_email $EMAIL
-  
+
   git checkout master
+
+  {
+    git merge third_branch -m "Merging third and master"
+  }||{
+    cp $HISTORY_PATH/$COMMIT/* .
+  }
   
-  git merge --no-commit third_branch
-  git mergetool
-
-
-  :diffg LO
-  :wga
-
-
-  cp ~/$SRC/* .
   add_all
 
   git rm "*" -f
 
-  comm "Added: nn fuction - returns Object in F class, * file - was removed, classes A, B, E got one new method each "
+  comm "Merged master and third branch. Added new functions in B, E, F"
   
 end

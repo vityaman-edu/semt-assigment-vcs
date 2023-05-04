@@ -1,12 +1,13 @@
 #!/bin/bash
 
-. ci/git/lib/head.sh --source-only
+. ci/git-r/lib/head.sh --source-only
 TARGET="main"
-. ci/git/lib/dsl.sh --source-only
+. ci/git-r/lib/dsl.sh --source-only
 
 begin
   call clean
   call init
+  call init_users
   call r0
   call r1
   call r2

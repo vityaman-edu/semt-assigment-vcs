@@ -1,12 +1,12 @@
 #!/bin/bash
 
-. ci/git/lib/head.sh --source-only
+. ci/git-r/lib/head.sh --source-only
 BRANCH="second_branch"
 COMMIT="commit2"
 TARGET="$BRANCH:$COMMIT"
-NAME="Vitya"
+NAME=$VITYA
 EMAIL="Vitya@itmo.ru"
-. ci/git/lib/dsl.sh --source-only
+. ci/git-r/lib/dsl.sh --source-only
 
 begin
   enter 
@@ -14,6 +14,8 @@ begin
   set_name $NAME
   set_email $EMAIL
   
+  git pull origin
+
   git checkout -b second_branch
 
   cp $HISTORY_PATH/$COMMIT/* .
@@ -21,4 +23,5 @@ begin
 
   comm "Created second branch, files are in the same state as in r0 commit."
   
+  git push origin second_branch
 end

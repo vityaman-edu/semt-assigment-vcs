@@ -27,15 +27,15 @@ end() {
 }
 
 set_name() {
-  git config --global user.name "$1"
+  git config --local user.name "$1"
 }
 
 set_email() {
-  git config --global user.email "$2"
+  git config --local user.email "$2"
 }
 
 enter() {
-  cd ~/.gitrepo/$REPO_NAME
+  cd $USERS_REPO/$NAME
 }
 
 comm() {
